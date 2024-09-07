@@ -63,6 +63,9 @@
             },
             "development": {
               "buildTarget": "currency-exchange:build:development"
+            },
+            "options": {
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -92,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3f773224-ccaa-40d2-908b-3dfd812940ea"
   }
 }

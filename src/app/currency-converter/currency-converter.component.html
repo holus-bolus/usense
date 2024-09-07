@@ -1,0 +1,48 @@
+<div class="currency-converter-container">
+  <div class="converter">
+    <div class="currency-select-container">
+      <label>Amount</label>
+      <input
+        type="number"
+        [(ngModel)]="fromAmount"
+        (input)="convertFrom()"
+        [placeholder]="fromCurrencySymbol + '1.00'"
+      />
+    </div>
+
+    <div class="currency-select-container">
+      <label>From</label>
+      <select [(ngModel)]="fromCurrency" (change)="onFromCurrencyChange()">
+        <option value="UAH">UAH - Ukrainian Hryvnia</option>
+        <option value="USD">USD - US Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+      </select>
+    </div>
+
+    <!-- Swap Button -->
+    <div class="swap-container">
+      <button class="swap-button" (click)="swapCurrencies()">⇄</button>
+    </div>
+
+    <div class="currency-select-container">
+      <label>To</label>
+      <select [(ngModel)]="toCurrency" (change)="onToCurrencyChange()">
+        <option value="UAH">UAH - Ukrainian Hryvnia</option>
+        <option value="USD">USD - US Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+      </select>
+    </div>
+
+    <div class="currency-select-container">
+      <label>Result</label>
+      <input
+        type="number"
+        [(ngModel)]="toAmount"
+        (input)="convertTo()"
+        [placeholder]="toCurrencySymbol + '1.00'"
+      />
+    </div>
+  </div>
+
+  <button class="convert-button" (click)="convertFrom()">Convert</button>
+</div>
